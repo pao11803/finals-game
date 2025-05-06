@@ -1,0 +1,125 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
+  height: 100%;
+}
+
+#menu,
+#game,
+#game-over,
+#settings-panel {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+#menu,
+#game-over {
+  background: #111;
+}
+
+#game {
+  background: #444 url('road.png') repeat-y center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Player car */
+#car {
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  bottom: 10px;
+  left: calc(50% - 25px);
+  background-image: url('player-car.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Obstacles as cars */
+.obstacle {
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  top: -100px;
+  background-image: url('enemy-car.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Fuel gauge */
+#fuel-container {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 30px;
+  height: 100px;
+  background: #444;
+  border: 2px solid #888;
+}
+
+#fuel-level {
+  width: 100%;
+  height: 100%;
+  background: lime;
+  transform-origin: bottom;
+}
+
+/* Speedometer */
+#speedometer {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #888;
+  border-radius: 50%;
+  background: #111;
+}
+
+#needle {
+  position: absolute;
+  width: 2px;
+  height: 45px;
+  background: #f00;
+  top: 5px;
+  left: 49px;
+  transform-origin: bottom;
+}
+
+button,
+select {
+  margin: 5px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+#settings-panel {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#leaderboard {
+  margin-top: 20px;
+  text-align: left;
+}
+
+#leaderboard h2 {
+  margin-bottom: 5px;
+}
+
+#leaderboard ol {
+  padding-left: 20px;
+}
